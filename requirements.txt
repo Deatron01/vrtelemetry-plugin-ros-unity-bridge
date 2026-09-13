@@ -1,0 +1,4 @@
+# rclpy and geometry_msgs come from your ROS 2 distribution's own installer
+# (apt, or the Windows ROS 2 build), not from PyPI -- do not add them here.
+# See README.md before enabling this plugin in plugins/registry.json.
+websockets>=12.0,<13.0

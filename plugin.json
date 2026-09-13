@@ -1,0 +1,11 @@
+{
+  "plugin_id": "ros-unity-bridge",
+  "name": "ROS 2 / Unity Bridge",
+  "version": "0.1.0",
+  "description": "Converts the live OpenXR HMD pose to ROS's coordinate convention and publishes geometry_msgs/PoseStamped via rosbridge_suite, for a Unity-simulated robotic arm. Requires a ROS 2 distribution and rosbridge_suite already installed on this machine -- see README.md before enabling.",
+  "entrypoint": ["python", "bridge_node.py"],
+  "requirements_file": "requirements.txt",
+  "protocol_version": 1,
+  "author": "VRTelemetry project",
+  "homepage": "https://github.com/Deatron01/vrtelemetry-plugin-ros-unity-bridge"
+}
