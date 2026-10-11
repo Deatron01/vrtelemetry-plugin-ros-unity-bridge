@@ -1,4 +1,13 @@
-# ROS 2 / Unity bridge plugin
+<p align="center">
+  <img src="./.github/assets/banner.svg" alt="ROS 2 / Unity Bridge — Live OpenXR HMD pose to ROS 2 and Unity, via rosbridge." width="100%" />
+</p>
+
+<p align="center">
+  <samp>PYTHON · ROS 2 · ROSBRIDGE_SUITE · VRTELEMETRY PLUGIN</samp><br />
+  <samp><a href="https://github.com/Deatron01/vrtelemetry-plugin-biosensor">BIOSENSOR PLUGIN ↗</a></samp>
+</p>
+
+### <samp>01 — WHAT IT IS</samp>
 
 > Protocol/wire format is specified once, for every plugin, in
 > [`PROTOCOL.md`](./PROTOCOL.md) -- read that first if you're modifying this
@@ -14,7 +23,7 @@ Out-of-process subscriber to the Core Hub's Event Router
 convention and publishes `geometry_msgs/PoseStamped` for a simulated
 robotic arm driven from Unity via `rosbridge_suite`.
 
-## Prerequisites (not installed by `PluginManager`)
+### <samp>02 — PREREQUISITES (NOT INSTALLED BY `PluginManager`)</samp>
 
 1. A ROS 2 distribution (Humble or newer recommended) with `rclpy` and
    `geometry_msgs` importable -- these come from the distro's own installer,
@@ -36,7 +45,7 @@ This plugin is **disabled by default** in `plugins/registry.json` --
 done on this machine. Flip `"enabled": true` once ROS 2 and rosbridge_suite
 are ready.
 
-## Running standalone (development, ROS 2 environment already sourced)
+### <samp>03 — RUNNING STANDALONE (DEVELOPMENT, ROS 2 ENVIRONMENT ALREADY SOURCED)</samp>
 
 ```
 python -m venv .venv
@@ -51,7 +60,7 @@ runs `bridge_node.py`, which usually means this venv needs to be created
 *after* sourcing the ROS 2 environment, or `--system-site-packages` passed
 to `python -m venv`, depending on your ROS 2 distro's own Python packaging.
 
-## Coordinate conversion
+### <samp>04 — COORDINATE CONVERSION</samp>
 
 See `coordinate_convert.py`'s docstring for the full derivation. Summary:
 OpenXR (right-handed, +Y up, -Z forward) and ROS/REP-103 (right-handed,
@@ -59,10 +68,16 @@ X-forward, Y-left, Z-up) are both right-handed, so converting between them
 is a fixed axis permutation with no extra sign inversion, applied to both
 the position and the quaternion's vector part.
 
-## Event contract
+### <samp>05 — EVENT CONTRACT</samp>
 
 Consumes `{"type": "telemetry_frame", "session_id": ..., "frame": {...}}`
 from `/ws/hub/telemetry`; reads `frame["hmd_pos_x/y/z"]`,
 `frame["hmd_rot_x/y/z/w"]` and `frame["hmd_tracking_valid"]`. A frame with
 `hmd_tracking_valid` false is skipped, matching the Core Hub's own rule for
 what counts as a real sample. Publishes nothing back onto the Event Router.
+
+<br />
+
+<p align="center">
+  <sub><samp>MORE WORK AT <a href="https://github.com/Deatron01">GITHUB.COM/DEATRON01</a></samp></sub>
+</p>
