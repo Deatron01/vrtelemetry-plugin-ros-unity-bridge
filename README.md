@@ -1,8 +1,7 @@
-<p align="center">
-  <img src="./.github/assets/banner.svg" alt="ROS 2 / Unity Bridge — Live OpenXR HMD pose to ROS 2 and Unity, via rosbridge." width="100%" />
-</p>
+<h1 align="center">ROS 2 / Unity Bridge</h1>
 
 <p align="center">
+  Live OpenXR HMD pose to ROS 2 and Unity, via rosbridge.<br />
   <samp>PYTHON · ROS 2 · ROSBRIDGE_SUITE · VRTELEMETRY PLUGIN</samp><br />
   <samp><a href="https://github.com/Deatron01/vrtelemetry-plugin-biosensor">BIOSENSOR PLUGIN ↗</a></samp>
 </p>
@@ -79,5 +78,7 @@ what counts as a real sample. Publishes nothing back onto the Event Router.
 <br />
 
 <p align="center">
+  <a href="https://github.com/Deatron01"><img src="https://raw.githubusercontent.com/Deatron01/Deatron01/main/assets/icon.png" width="56" alt="Dea" /></a><br />
+  <sub><i>Little chaos in a quiet mind.</i></sub><br />
   <sub><samp>MORE WORK AT <a href="https://github.com/Deatron01">GITHUB.COM/DEATRON01</a></samp></sub>
 </p>
